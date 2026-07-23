@@ -1,0 +1,14 @@
+torch
+torchvision
+fastapi
+uvicorn
+sqlalchemy
+streamlit
+grad-cam
+groq
+python-dotenv
+python-multipart
+pillow
+pandas
+scikit-learn
+matplotlib
