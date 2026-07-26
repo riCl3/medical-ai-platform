@@ -7,6 +7,7 @@ groq
 python-dotenv
 pillow
 numpy
+opencv-python-headless
 pandas
 scikit-learn
 matplotlib
