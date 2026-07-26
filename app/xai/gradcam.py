@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Tuple
 
 import numpy as np
+import streamlit as st
 import torch
 import torch.nn as nn
 from PIL import Image
@@ -23,6 +24,7 @@ _transform = transforms.Compose([
 ])
 
 
+@st.cache_resource
 def _load_model(device: torch.device) -> Tuple[nn.Module, nn.Module]:
     model = models.resnet18(weights=None)
     num_features = model.fc.in_features

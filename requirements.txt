@@ -1,14 +1,12 @@
 torch
 torchvision
-fastapi
-uvicorn
 sqlalchemy
 streamlit
 grad-cam
 groq
 python-dotenv
-python-multipart
 pillow
+numpy
 pandas
 scikit-learn
 matplotlib

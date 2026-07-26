@@ -32,6 +32,7 @@ wheels/
 *.pickle
 *.pt
 *.pth
+!models/model.pth
 *.onnx
 *.pb
 *.weights

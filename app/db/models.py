@@ -17,6 +17,7 @@ class Prediction(Base):
     predicted_class = Column(String(50), nullable=False)
     confidence = Column(Float, nullable=False)
     gradcam_image_path = Column(String(1024))
+    gradcam_blob = Column(Text)
     llm_report = Column(Text)
 
     def __repr__(self):

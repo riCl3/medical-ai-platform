@@ -29,7 +29,15 @@ not a substitute for professional medical diagnosis."
 
 
 def generate_report(predicted_class: str, confidence: float) -> str:
-    client = Groq(api_key=os.environ["GROQ_API_KEY"])
+    api_key = os.environ.get("GROQ_API_KEY")
+    if not api_key:
+        return (
+            "## Findings\nNo report generated.\n\n"
+            "## Impression\nGROQ_API_KEY is not configured.\n\n"
+            "## Recommendation\nPlease set the GROQ_API_KEY environment variable."
+        )
+
+    client = Groq(api_key=api_key)
 
     user_msg = (
         f"Prediction: {predicted_class}\n"

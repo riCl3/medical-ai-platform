@@ -21,6 +21,7 @@ def save_prediction(
     predicted_class: str,
     confidence: float,
     gradcam_image_path: str = None,
+    gradcam_blob: str = None,
     llm_report: str = None,
 ) -> int:
     session = SessionLocal()
@@ -30,6 +31,7 @@ def save_prediction(
             predicted_class=predicted_class,
             confidence=confidence,
             gradcam_image_path=gradcam_image_path,
+            gradcam_blob=gradcam_blob,
             llm_report=llm_report,
         )
         session.add(pred)
